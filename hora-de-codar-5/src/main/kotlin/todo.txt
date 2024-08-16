@@ -1,0 +1,15 @@
+menu:
+ • Saldo
+    └ Pede senha
+ • "Extrato": Ver Extrato (com histórico fictício)
+    └ Pede senha
+ • Saque
+    └ Pede senha
+ • Depósito
+ • Transferência
+    └ Qualquer número, mas exclusivamente somente números
+    └ Ao trasferir remover o valor da conta igual a "Saldo"
+    └ Não pode ser menor ou igual a zero
+    └ Pede senha
+ • Sair
+3589
