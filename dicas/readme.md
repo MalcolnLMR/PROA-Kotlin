@@ -75,7 +75,7 @@ public class Test {
 ```
 
 ***Qual a diferença do print para o println?*** <br/>
-O println pula a linha depois de escrever o texto, de maneira simples, você pode escrever das duas formas abaixo:
+O println pula a linha depois de escrever o texto, de maneira simples, você pode escrever das duas formas abaixo: <br/>
 `println(nome_do_carro)` = `print(nome_do_carro + "\n")`
 
 ### Exercício 2: Kotlin
