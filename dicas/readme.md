@@ -35,16 +35,16 @@ O tipo é opcional apenas quando você determina um valor para a variável enqua
 *Para ajudar a lembrar de qual tipo pode ser alterado, pense em **VAR**íavel*
 
 ### Semelhanças
-• Tipos
-Cadeia → String
-Caracter → Char
-Inteiro → Int
-Real → Double ou Float
-Vazio → void (exclusivo do Java)
+• Tipos <br/>
+Cadeia → String <br/>
+Caracter → Char <br/>
+Inteiro → Int <br/>
+Real → Double ou Float <br/>
+Vazio → void (exclusivo do Java) <br/> <br/>
 
-• Funções
-escreva → print
-leia → readln
+• Funções <br/>
+escreva → print <br/>
+leia → readln <br/>
 
 ## Exercícios 1 e 2 em Kotlin
 ### Exercício 1: Kotlin
