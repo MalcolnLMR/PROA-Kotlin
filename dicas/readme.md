@@ -88,9 +88,9 @@ fun main(){
 }
 ```
 ***O que é o "$" no meio do texto?*** <br/>
-O Kotlin suporta adicionar as variáveis direto no texto, pra ajudar na hora de fazer o print e editar uma String.
-`print("Olá $username")` = `escreva("Olá, ", username)`
-Lembrando que esta forma de escrever o texto não é obrigatória, ele também suporta concatenação (adicionar uma String em outra), e escrever igual ao portugol, utilizando virgulas
+O Kotlin suporta adicionar as variáveis direto no texto, pra ajudar na hora de fazer o print e editar uma String. <br/>
+`print("Olá $username")` = `escreva("Olá, ", username)` <br/>
+Lembrando que esta forma de escrever o texto não é obrigatória, ele também suporta concatenação (adicionar uma String em outra), e escrever igual ao portugol, utilizando virgulas.
 
 ## Aviso Importante!
 Quando estiver fazendo as leituras com o `readln()`, lembre que ele retorna SEMPRE como String (texto)! Caso queira alterar o texto para número, você deve converter usando: `readln().toDouble()` ou `readln().toInt()`
