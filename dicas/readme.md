@@ -1,12 +1,11 @@
-Bem-vindos(as) ao tutorial super rápido pra fazer a tarefa “[Kotlin] Hora de Codar” pro dia 19/08/2024
-
-primeiro quero começar lembrando os conceitos que vamos precisar
-
+Bem-vindos(as) ao tutorial super rápido pra fazer a tarefa “[Kotlin] Hora de Codar” pro dia 19/08/2024 <br/>
+primeiro quero começar lembrando os conceitos que vamos precisar <br/>
 
 ## Váriavel
-• Definição objetiva
+• **Definição objetiva:** 
    É um recurso usado para guardar informações que podem ser alteradas durante o código
-• Explicação detalhada
+<br/>
+• **Explicação detalhada:** 
    Funciona como um copo, ele pode ter vário liquidos diferentes, as vezes até objetos, assim como também pode estar vazio, o copo está funcionando como um local para armazenar informação, assim como uma variável.
 
 ### Definindo uma variável em portugol:
@@ -29,23 +28,23 @@ var numero_qualquer_menos_preciso: Float = 3.14f
 val qualquer_coisa = "Eu sou um Valor que não pode ser alterado!"
 var qualquer_coisa = "Eu sou um valor que PODE ser alterado!"
 ```
-Como declarar a variável: 
-var [nome da variavel] : [tipo da variavel] = [valor da variavel]
+Como declarar a variável: <br/>
+var [nome da variavel] : [tipo da variavel] = [valor da variavel] <br/>
 O tipo é opcional apenas quando você determina um valor para a variável enquando declara ela.
-
+<br/><br/>
 *Para ajudar a lembrar de qual tipo pode ser alterado, pense em **VAR**íavel*
 
 ### Semelhanças
-• Tipos
-Cadeia → String
-Caracter → Char
-Inteiro → Int
-Real → Double ou Float
-Vazio → void (exclusivo do Java)
+• Tipos <br/>
+Cadeia → String <br/>
+Caracter → Char <br/>
+Inteiro → Int <br/>
+Real → Double ou Float <br/>
+Vazio → void (exclusivo do Java) <br/> <br/>
 
-• Funções
-escreva → print
-leia → readln
+• Funções <br/>
+escreva → print <br/>
+leia → readln <br/>
 
 ## Exercícios 1 e 2 em Kotlin
 ### Exercício 1: Kotlin
@@ -56,7 +55,7 @@ fun main() {
     println(nome_do_carro)
 }
 ```
-*O que é o "fun main() {}"?*
+***O que é o "fun main() {}"?*** <br/>
 Em poucas palavras, é a função principal onde você irá escrever seu código. Serve o mesmo propósito deste trecho de código em portugol:
 ```portugol
 programa {
@@ -75,8 +74,8 @@ public class Test {
 }
 ```
 
-*Qual a diferença do print para o println?*
-O println pula a linha depois de escrever o texto, de maneira simples, você pode escrever das duas formas abaixo:
+***Qual a diferença do print para o println?*** <br/>
+O println pula a linha depois de escrever o texto, de maneira simples, você pode escrever das duas formas abaixo: <br/>
 `println(nome_do_carro)` = `print(nome_do_carro + "\n")`
 
 ### Exercício 2: Kotlin
@@ -84,14 +83,14 @@ Enunciado: Escreva um programa em que o usuário informe o seu nome e exiba a me
 ```kotlin
 fun main(){
     print("Escreva seu nome: ")
-    var username = readlnOrNull()
+    var username: String = readln()
     println("Olá, $username")
 }
 ```
-*O que é o "$" no meio do texto?*
-O Kotlin suporta adicionar as variáveis direto no texto, pra ajudar na hora de fazer o print e editar uma String.
-`print("Olá $username")` = `escreva("Olá, ", username)`
-Lembrando que esta forma de escrever o texto não é obrigatória, ele também suporta concatenação (adicionar uma String em outra), e escrever igual ao portugol, utilizando virgulas
+***O que é o "$" no meio do texto?*** <br/>
+O Kotlin suporta adicionar as variáveis direto no texto, pra ajudar na hora de fazer o print e editar uma String. <br/>
+`print("Olá $username")` = `escreva("Olá, ", username)` <br/>
+Lembrando que esta forma de escrever o texto não é obrigatória, ele também suporta concatenação (adicionar uma String em outra), e escrever igual ao portugol, utilizando virgulas.
 
 ## Aviso Importante!
 Quando estiver fazendo as leituras com o `readln()`, lembre que ele retorna SEMPRE como String (texto)! Caso queira alterar o texto para número, você deve converter usando: `readln().toDouble()` ou `readln().toInt()`
