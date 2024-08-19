@@ -83,7 +83,7 @@ Enunciado: Escreva um programa em que o usuário informe o seu nome e exiba a me
 ```kotlin
 fun main(){
     print("Escreva seu nome: ")
-    var username = readln()
+    var username: String = readln()
     println("Olá, $username")
 }
 ```
