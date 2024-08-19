@@ -1,11 +1,10 @@
-Bem-vindos(as) ao tutorial super rápido pra fazer a tarefa “[Kotlin] Hora de Codar” pro dia 19/08/2024
-
-primeiro quero começar lembrando os conceitos que vamos precisar
-
+Bem-vindos(as) ao tutorial super rápido pra fazer a tarefa “[Kotlin] Hora de Codar” pro dia 19/08/2024 <br/>
+primeiro quero começar lembrando os conceitos que vamos precisar <br/>
 
 ## Váriavel
 • Definição objetiva
    É um recurso usado para guardar informações que podem ser alteradas durante o código
+<br/>
 • Explicação detalhada
    Funciona como um copo, ele pode ter vário liquidos diferentes, as vezes até objetos, assim como também pode estar vazio, o copo está funcionando como um local para armazenar informação, assim como uma variável.
 
@@ -90,7 +89,11 @@ fun main(){
 ```
 *O que é o "$" no meio do texto?*
 O Kotlin suporta adicionar as variáveis direto no texto, pra ajudar na hora de fazer o print e editar uma String.
-`print("Olá $username")` = `escreva("Olá, ", username)`
+`kotlin
+print("Olá $username")
+` = `
+portugol escreva("Olá, ", username)
+`
 Lembrando que esta forma de escrever o texto não é obrigatória, ele também suporta concatenação (adicionar uma String em outra), e escrever igual ao portugol, utilizando virgulas
 
 ## Aviso Importante!
