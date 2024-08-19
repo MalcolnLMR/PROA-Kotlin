@@ -28,10 +28,10 @@ var numero_qualquer_menos_preciso: Float = 3.14f
 val qualquer_coisa = "Eu sou um Valor que não pode ser alterado!"
 var qualquer_coisa = "Eu sou um valor que PODE ser alterado!"
 ```
-Como declarar a variável: 
-var [nome da variavel] : [tipo da variavel] = [valor da variavel]
+Como declarar a variável: <br/>
+var [nome da variavel] : [tipo da variavel] = [valor da variavel] <br/>
 O tipo é opcional apenas quando você determina um valor para a variável enquando declara ela.
-
+<br/><br/>
 *Para ajudar a lembrar de qual tipo pode ser alterado, pense em **VAR**íavel*
 
 ### Semelhanças
@@ -55,7 +55,7 @@ fun main() {
     println(nome_do_carro)
 }
 ```
-*O que é o "fun main() {}"?*
+***O que é o "fun main() {}"?*** <br/>
 Em poucas palavras, é a função principal onde você irá escrever seu código. Serve o mesmo propósito deste trecho de código em portugol:
 ```portugol
 programa {
@@ -74,7 +74,7 @@ public class Test {
 }
 ```
 
-*Qual a diferença do print para o println?*
+***Qual a diferença do print para o println?*** <br/>
 O println pula a linha depois de escrever o texto, de maneira simples, você pode escrever das duas formas abaixo:
 `println(nome_do_carro)` = `print(nome_do_carro + "\n")`
 
@@ -87,7 +87,7 @@ fun main(){
     println("Olá, $username")
 }
 ```
-*O que é o "$" no meio do texto?*
+***O que é o "$" no meio do texto?*** <br/>
 O Kotlin suporta adicionar as variáveis direto no texto, pra ajudar na hora de fazer o print e editar uma String.
 `print("Olá $username")` = `escreva("Olá, ", username)`
 Lembrando que esta forma de escrever o texto não é obrigatória, ele também suporta concatenação (adicionar uma String em outra), e escrever igual ao portugol, utilizando virgulas
