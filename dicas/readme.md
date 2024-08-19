@@ -2,10 +2,10 @@ Bem-vindos(as) ao tutorial super rápido pra fazer a tarefa “[Kotlin] Hora de 
 primeiro quero começar lembrando os conceitos que vamos precisar <br/>
 
 ## Váriavel
-• **Definição objetiva: **
+• **Definição objetiva:** 
    É um recurso usado para guardar informações que podem ser alteradas durante o código
 <br/>
-• **Explicação detalhada: **
+• **Explicação detalhada:** 
    Funciona como um copo, ele pode ter vário liquidos diferentes, as vezes até objetos, assim como também pode estar vazio, o copo está funcionando como um local para armazenar informação, assim como uma variável.
 
 ### Definindo uma variável em portugol:
