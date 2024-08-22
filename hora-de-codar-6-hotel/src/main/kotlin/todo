@@ -1,0 +1,57 @@
+1. Invente um nome para o Hotel.
+
+2. Ao acessar o sistema, exiba "Bem vindo ao {Hotel}".
+
+3. Ao acessar o sistema, pergunte o nome do usuário e uma senha.
+O nome do usuário não precisa de validação.
+
+A senha deve ser 2678.
+
+4. Na função "inicio", utilize escolha/caso (switch/case) para validar a opção escolhida pelo do usuário.
+
+5. Sempre que o usuário acessar o sistema, diga "Bem vindo ao Hotel {Hotel}, {Nome}. É um imenso prazer ter você
+por aqui!".
+
+6. Substituir a expressão {Hotel} pelo nome do hotel informado pelo em todos os pontos do código.
+
+7. Sempre que o usuário sair do sistema, exiba a mensagem "Muito obrigado e até logo, {Nome}."
+
+8. Para cada escolha que o usuário fizer no menu principal, deve ser desenvolvido um programa seguindo as
+instruções abaixo. Esse programa deve ser criado utilizando uma função principal como chamada.
+Todo o restante é feito com sua liberdade.
+
+9. Atualize o menu de opções e a função inicio com todas as opções de programas abaixo.
+
+10. Atualize a função "erro" com as novas opções do menu.
+
+11. Ao encerrar qualquer programa abaixo, sempre retorne ao menu inicial.
+
+---------- * ----------
+1) Quantos quartos são?
+Todo hotel precisava reservar quartos.
+Então vamos começar por isso.
+
+Considere que o hotel possui 20 quartos e ao iniciar o programa
+ todos estão livres.
+
+Desenvolva um programa que:
+1) Receba o valor de uma diária no hotel e a quantidade de dias
+ de hospedagem. Valide as informações, ou seja, impeça que o
+ usuário informe dados inválidos, de maneira que o valor da
+ diária não seja negativo e que a quantidade de dias não seja
+ nem negativa, nem maior que 30.
+
+Em caso de informação inválida escreva na tela “Valor Inválido”
+e volte ao inicio do programa.
+
+2) Em seguida, caso o usuário tenha informado um valor correto,
+pergunte o nome do hóspede.
+
+3) Agora será informado o número do quarto (de 1 a 20); A
+informação deve ser armazenada e se outro hóspede tentar
+ocupar um quarto já ocupado o sistema informará “Quarto já
+está ocupado”. No caso de um quarto ocupado, deve ser oferecido
+ao usuário a escolha de outro quarto.
+
+4)O próximo passo é perguntar se o usuário confirma a reserva.
+Caso não aceite, volte ao menu inicial.
