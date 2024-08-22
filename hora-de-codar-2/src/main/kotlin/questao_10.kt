@@ -8,15 +8,21 @@
 
 fun main(){
     var height : Double = 0.0
-    var sex : Int = 0
+    var gender : Int = 0
+
+    var x = 0 
+    print(++x)
+    print(x++)
+    print(x++)
+    print(x)
 
     println("Vamos descobrir seu peso ideal!")
-    print("primeiro digite seu sexo:\n1. feminino\n2. masculino\nResposta: ")
-    sex = readln().toInt()
+    print("primeiro digite seu gênero:\n1. feminino\n2. masculino\nResposta: ")
+    gender = readln().toInt()
 
     print("Agora precisamos saber a sua altura (em metros): ")
     height = readln().toDouble()
 
-    if(sex == 1) println("seu peso ideal é " + ((height * 72.7) - 58))
+    if(gender == 1) println("seu peso ideal é " + ((height * 72.7) - 58))
     else println("seu peso ideal é " + ((height * 62.1) - 44.7))
 }
