@@ -1,21 +1,21 @@
 import java.lang.runtime.TemplateRuntime
 import utils.Event
 
-class MainApplication() {
+class MainApplication {
     // Values
     val userPassword: String = "2678"
-    val hotelName: String = "Terabitia"
-
 
     // Variables
-    lateinit var userName: String
-    var isAppRunning: Boolean = false
+    private lateinit var userName: String
+    private var isAppRunning: Boolean = false
 
     // Other classes
     lateinit var customer: Customer
     lateinit var hotel: Hotel
 
-    var onStart = Event()
+    // Events
+    var onStart: Event = Event()
+    var onStop: Event = Event()
 
 
     fun startApplication(){
@@ -25,19 +25,23 @@ class MainApplication() {
         customer = Customer(this)
         hotel = Hotel(this)
 
+        login()
+        onStart()
 
+        println("Bem vindo ao Hotel ${TextManager.hotelName}, $userName. É um imenso prazer ter você por aqui!")
         // Main Loop
         var option: Int
         while (isAppRunning){
-            option = askQuestion(getMenu()).toInt()
+            option = askQuestion(TextManager.getMenu()).toInt()
             when (option) {
-                1 -> reserva_quarto()
-                2 -> cadastro_hospede()
-                3 -> abastecer_carros()
+                1 -> hotel.start()
+                2 -> true
+                3 -> true
                 4 -> sair()
-                else -> erro()
+                else -> true
             }
         }
+        println("Muito obrigado e até logo, $userName")
 
         onStop()
     }
@@ -47,16 +51,33 @@ class MainApplication() {
 
 
         var password = askQuestion("Qual a senha?")
-        while (userName != "2678"){
+        while (password != userPassword){
             println("\nSenha incorreta.")
             password = askQuestion("Qual a senha?")
         }
 
-        println("Bem vindo ao Hotel $hotelName, $userName. É um imenso prazer ter você por aqui!")
     }
 
     fun askQuestion(question: String) : String{
         print("$question\nResposta: ")
         return readln()
+    }
+
+    fun getUserName(): String{
+        return userName
+    }
+
+    fun sair(){
+        println("Você deseja sair? s/n")
+
+        var option: String = readln()
+        if(option.lowercase() == "s"){
+            isAppRunning = false
+        } else if(option.lowercase() == "n") {
+            //todo
+        } else {
+            println("Desculpe, mas não compreendi")
+            sair()
+        }
     }
 }
