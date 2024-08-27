@@ -21,4 +21,8 @@ fun main(){
 
     if(read.lowercase() in planetsArray) println("$read está na lista de planetas!")
     else println("$read não está na lista de planetas :c")
+
+    if(planetsArray.contains(read.lowercase())){
+        print("tá tambem")
+    }
 }

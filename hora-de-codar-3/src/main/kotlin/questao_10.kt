@@ -10,9 +10,9 @@ fun main(){
     print("Digite o valor de N: ")
     read = readln().toInt()
 
-    for(i in 1..10){
+    for(i in 1..read){
         println("-- * Tabuada do $i * --")
-        for(j in 1..read){
+        for(j in 1..10){
             println("$i * $j = " + (i * j))
         }
     }
