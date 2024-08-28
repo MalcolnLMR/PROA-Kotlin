@@ -11,10 +11,6 @@ fun main(){
     var gender : Int = 0
 
     var x = 0 
-    print(++x)
-    print(x++)
-    print(x++)
-    print(x)
 
     println("Vamos descobrir seu peso ideal!")
     print("primeiro digite seu gênero:\n1. feminino\n2. masculino\nResposta: ")
