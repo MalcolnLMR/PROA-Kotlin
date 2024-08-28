@@ -9,6 +9,7 @@ class TextManager {
         2) Cadastro de Hóspedes
         3) Abastecimento de Carros
         4) Cadastrar Evento
+        5) Calcular Ar Condicionado
         5) Sair
     """.trimMargin()
 

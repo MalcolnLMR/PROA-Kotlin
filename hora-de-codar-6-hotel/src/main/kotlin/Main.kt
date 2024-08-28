@@ -1,4 +1,4 @@
 fun main(){
-    var app = MainApplication()
+    val app = MainApplication()
     app.startApplication()
 }

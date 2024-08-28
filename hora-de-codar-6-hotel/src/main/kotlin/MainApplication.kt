@@ -15,6 +15,7 @@ class MainApplication {
     private lateinit var customer: Customer
     private lateinit var event: Events
     private lateinit var gasStation: GasStation
+    private lateinit var airConditioning: AirConditioning
 
     // Events
     var onStart: Event = Event()
@@ -29,6 +30,7 @@ class MainApplication {
         customer = Customer(this)
         event = Events(this)
         gasStation = GasStation(this)
+        airConditioning = AirConditioning(this)
 
         login()
 
@@ -39,8 +41,8 @@ class MainApplication {
         while (isAppRunning){
             read = TextManager.askToUser(TextManager.getMenu())
 
-            if (!(Numbers.isInt(read) && read.toInt() in 1..5)){
-                println("Por favor, informe um número entre 1 e 4.")
+            if (!(Numbers.isInt(read) && read.toInt() in 1..6)){
+                println("Por favor, informe um número entre 1 e 6.")
                 continue
             }
 
@@ -49,8 +51,9 @@ class MainApplication {
                 2 -> customer.start()
                 3 -> gasStation.start()
                 4 -> event.start()
-                5 -> sair()
-                else -> true
+                5 -> airConditioning.start()
+                6 -> sair()
+                else -> continue
             }
         }
         println("Muito obrigado e até logo, $userName")
