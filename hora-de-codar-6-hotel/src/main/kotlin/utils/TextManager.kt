@@ -10,7 +10,7 @@ class TextManager {
         3) Abastecimento de Carros
         4) Cadastrar Evento
         5) Calcular Ar Condicionado
-        5) Sair
+        6) Sair
     """.trimMargin()
 
         private var customerMenu: String = """Selecione uma opção
