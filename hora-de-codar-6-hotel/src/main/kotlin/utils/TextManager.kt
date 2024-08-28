@@ -1,3 +1,5 @@
+package utils
+
 class TextManager {
     companion object{
         var hotelName = "Terabitia"
@@ -9,6 +11,13 @@ class TextManager {
         4) Sair
     """.trimMargin()
 
+        private var customerMenu: String = """Selecione uma opção
+        1) Cadastrar
+        2) Pesquisar
+        3) Listar
+        4) Sair
+    """.trimMargin()
+
         private var trueOptions = listOf("sim", "s", "y", "yes")
         private var falseOptions = listOf("não", "nao", "n", "not")
 
@@ -17,10 +26,14 @@ class TextManager {
             return menu
         }
 
+        fun getCustomerMenu(): String{
+            return customerMenu
+        }
+
         fun askToUser(question: String): String{
             var response: String = ""
             while (true){
-                println("$question\nResposta: ")
+                print("$question\nResposta: ")
                 response = readln()
                 if (response.isNotBlank()) break
                 println("\n• Resposta inválida •\n")

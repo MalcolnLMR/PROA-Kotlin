@@ -30,5 +30,15 @@ class Numbers {
             }
             return true
         }
+
+        fun isInt(number: String): Boolean{
+            var _num: Int = -1
+            try {
+                _num = number.toInt()
+            } catch (e: NumberFormatException){
+                return false
+            }
+            return true
+        }
     }
 }

@@ -1,17 +1,18 @@
-import java.lang.runtime.TemplateRuntime
 import utils.Event
+import utils.Numbers
+import utils.TextManager
 
 class MainApplication {
     // Values
-    val userPassword: String = "2678"
+    private val userPassword: String = "2678"
 
     // Variables
     private lateinit var userName: String
     private var isAppRunning: Boolean = false
 
     // Other classes
-    lateinit var customer: Customer
-    lateinit var hotel: Hotel
+    private lateinit var hotel: Hotel
+    private lateinit var customer: Customer
 
     // Events
     var onStart: Event = Event()
@@ -22,20 +23,26 @@ class MainApplication {
         isAppRunning = true // Start application
 
         // Starting other classes
-        customer = Customer(this)
         hotel = Hotel(this)
+        customer = Customer(this)
 
         login()
-        onStart()
 
+        onStart()
         println("Bem vindo ao Hotel ${TextManager.hotelName}, $userName. É um imenso prazer ter você por aqui!")
         // Main Loop
-        var option: Int
+        var read: String
         while (isAppRunning){
-            option = askQuestion(TextManager.getMenu()).toInt()
-            when (option) {
+            read = TextManager.askToUser(TextManager.getMenu())
+
+            if (!(Numbers.isInt(read) && read.toInt() in 1..4)){
+                println("Por favor, informe um número entre 1 e 4.")
+                continue
+            }
+
+            when (read.toInt()) {
                 1 -> hotel.start()
-                2 -> true
+                2 -> customer.start()
                 3 -> true
                 4 -> sair()
                 else -> true
@@ -46,31 +53,26 @@ class MainApplication {
         onStop()
     }
 
-    fun login(){
-        userName = askQuestion("Qual o seu nome?")
+    private fun login(){
+        userName = TextManager.askToUser("Qual o seu nome?")
 
 
-        var password = askQuestion("Qual a senha?")
+        var password = TextManager.askToUser("Qual a senha?")
         while (password != userPassword){
             println("\nSenha incorreta.")
-            password = askQuestion("Qual a senha?")
+            password = TextManager.askToUser("Qual a senha?")
         }
 
-    }
-
-    fun askQuestion(question: String) : String{
-        print("$question\nResposta: ")
-        return readln()
     }
 
     fun getUserName(): String{
         return userName
     }
 
-    fun sair(){
+    private fun sair(){
         println("Você deseja sair? s/n")
 
-        var option: String = readln()
+        val option: String = readln()
         if(option.lowercase() == "s"){
             isAppRunning = false
         } else if(option.lowercase() == "n") {

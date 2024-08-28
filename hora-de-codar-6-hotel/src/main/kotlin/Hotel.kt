@@ -1,5 +1,6 @@
 import utils.Numbers
 import utils.Rooms
+import utils.TextManager
 
 class Hotel(main: MainApplication) {
     // Declarations
