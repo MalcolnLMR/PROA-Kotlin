@@ -59,7 +59,7 @@ class AirConditioning(main: MainApplication) {
         airConditioningPrices.add(auxPrice)
     }
 
-    fun printBestPrice(){
+    private fun printBestPrice(){
         var bestPriceIndex = 0
         for((i, value) in airConditioningPrices.withIndex()){
             if (airConditioningPrices[bestPriceIndex] > value){

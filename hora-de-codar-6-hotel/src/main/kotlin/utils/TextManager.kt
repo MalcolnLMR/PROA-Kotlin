@@ -35,7 +35,7 @@ class TextManager {
         }
 
         fun askToUser(question: String): String{
-            var response: String = ""
+            var response: String
             while (true){
                 print("$question\nResposta: ")
                 response = readln()
@@ -56,10 +56,10 @@ class TextManager {
             return (isTrue(response))
         }
 
-        fun isTrue(text: String): Boolean{
+        private fun isTrue(text: String): Boolean{
             return (text.lowercase() in trueOptions)
         }
-        fun isFalse(text: String): Boolean{
+        private fun isFalse(text: String): Boolean{
             return (text.lowercase() in falseOptions)
         }
 
@@ -74,11 +74,6 @@ class TextManager {
         fun isWeekDay(text: String): Boolean{
             return (text.lowercase() in weekDaysOptions)
         }
-
-    }
-
-
-    constructor(){
 
     }
 }

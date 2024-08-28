@@ -1,6 +1,5 @@
 import utils.Numbers
 import utils.TextManager
-import kotlin.math.max
 
 class Customer(main: MainApplication) {
     companion object{
@@ -10,18 +9,10 @@ class Customer(main: MainApplication) {
             if (age in 60..150) return 0.5
             return -1.0 // On Error return -1
         }
-
-        fun isAgeValid(age: Int): Double{
-            if (age in 7..59) return 1.0
-            if (age in 0..6) return 0.0
-            if (age in 60..150) return 0.5
-            return -1.0 // On Error return -1
-        }
     }
 
     private val maxCustomers = 15
     private var actualCustomers: Int = 0
-    private val mainApplication = main
     private lateinit var customers : MutableList<String>
 
     init {

@@ -6,10 +6,9 @@ class GasStation(main: MainApplication) {
     private val mainApplication = main
 
     private val gasStations = mutableListOf("Wayne Oil", "Stark Petrol")
-    private val carMaxTank = 42
 
     fun start(){
-        var prices = mutableListOf<Double>()
+        val prices = mutableListOf<Double>()
 
         var read: String
         for(i in 0..<gasStations.size*2){

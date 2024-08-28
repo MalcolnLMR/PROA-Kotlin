@@ -12,19 +12,18 @@ class Numbers {
         }
 
         fun isNatural(number: String): Boolean {
-            var _num: Double = -1.0
+            val num: Double
             try {
-                _num = number.toDouble()
+                num = number.toDouble()
             } catch (e: NumberFormatException){
                 return false
             }
-            return (_num > 0.0)
+            return (num > 0.0)
         }
 
         fun isNumeric(number: String): Boolean{
-            var _num: Double = -1.0
             try {
-                _num = number.toDouble()
+                number.toDouble()
             } catch (e: NumberFormatException){
                 return false
             }
@@ -32,9 +31,8 @@ class Numbers {
         }
 
         fun isInt(number: String): Boolean{
-            var _num: Int = -1
             try {
-                _num = number.toInt()
+                number.toInt()
             } catch (e: NumberFormatException){
                 return false
             }

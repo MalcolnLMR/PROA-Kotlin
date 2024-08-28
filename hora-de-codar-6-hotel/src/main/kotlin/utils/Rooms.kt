@@ -1,7 +1,7 @@
 package utils
 
 // A specified class to work on managing rooms
-class Rooms() {
+class Rooms {
 
     // Declarations
     private var totalRooms: Int = 20
@@ -25,18 +25,12 @@ class Rooms() {
     }
 
     fun getRoomAvailabilityText(): String{
-        var response:String = ""
+        var response = ""
         for ((i, room) in roomsAvailability.withIndex()){
             response += " • Quarto ${i+1} está ${if (room) "LIVRE" else "OCUPADO"}\n"
         }
         return response
     }
-
-    fun getRoomPrice(index: Int): Double?{
-        if (roomsAvailability[index]) return null
-        return roomsPrice[index]
-    }
-
     fun addClient(roomNumber: Int, roomPrice: Double, roomDays: Int): Boolean{
         if (!(Numbers.isNatural(roomPrice) && Numbers.isNatural(roomDays))) return false
         if (!isRoomAvailable(roomNumber)) return false
