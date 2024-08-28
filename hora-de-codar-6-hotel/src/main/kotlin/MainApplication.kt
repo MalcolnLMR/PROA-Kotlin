@@ -14,6 +14,7 @@ class MainApplication {
     private lateinit var hotel: Hotel
     private lateinit var customer: Customer
     private lateinit var event: Events
+    private lateinit var gasStation: GasStation
 
     // Events
     var onStart: Event = Event()
@@ -27,6 +28,7 @@ class MainApplication {
         hotel = Hotel(this)
         customer = Customer(this)
         event = Events(this)
+        gasStation = GasStation(this)
 
         login()
 
@@ -45,7 +47,7 @@ class MainApplication {
             when (read.toInt()) {
                 1 -> hotel.start()
                 2 -> customer.start()
-                3 -> true
+                3 -> gasStation.start()
                 4 -> event.start()
                 5 -> sair()
                 else -> true
