@@ -13,6 +13,7 @@ class MainApplication {
     // Other classes
     private lateinit var hotel: Hotel
     private lateinit var customer: Customer
+    private lateinit var event: Events
 
     // Events
     var onStart: Event = Event()
@@ -25,6 +26,7 @@ class MainApplication {
         // Starting other classes
         hotel = Hotel(this)
         customer = Customer(this)
+        event = Events(this)
 
         login()
 
@@ -35,7 +37,7 @@ class MainApplication {
         while (isAppRunning){
             read = TextManager.askToUser(TextManager.getMenu())
 
-            if (!(Numbers.isInt(read) && read.toInt() in 1..4)){
+            if (!(Numbers.isInt(read) && read.toInt() in 1..5)){
                 println("Por favor, informe um número entre 1 e 4.")
                 continue
             }
@@ -44,7 +46,8 @@ class MainApplication {
                 1 -> hotel.start()
                 2 -> customer.start()
                 3 -> true
-                4 -> sair()
+                4 -> event.start()
+                5 -> sair()
                 else -> true
             }
         }

@@ -8,7 +8,8 @@ class TextManager {
         1) Reserva de Quartos
         2) Cadastro de Hóspedes
         3) Abastecimento de Carros
-        4) Sair
+        4) Cadastrar Evento
+        5) Sair
     """.trimMargin()
 
         private var customerMenu: String = """Selecione uma opção
@@ -20,6 +21,8 @@ class TextManager {
 
         private var trueOptions = listOf("sim", "s", "y", "yes")
         private var falseOptions = listOf("não", "nao", "n", "not")
+        private var weekDaysOptions = listOf("segunda", "terça", "terca", "quarta", "quinta", "sexta")
+        private var weekEndDaysOptions = listOf("sábado", "sabado", "domingo")
 
 
         fun getMenu(): String{
@@ -57,6 +60,18 @@ class TextManager {
         }
         fun isFalse(text: String): Boolean{
             return (text.lowercase() in falseOptions)
+        }
+
+        fun isWeekDayValid(text: String): Boolean{
+            return (text.lowercase() in weekDaysOptions || text.lowercase() in weekEndDaysOptions)
+        }
+
+        fun isWeekEndDay(text: String): Boolean{
+            return (text.lowercase() in weekEndDaysOptions)
+        }
+
+        fun isWeekDay(text: String): Boolean{
+            return (text.lowercase() in weekDaysOptions)
         }
 
     }
