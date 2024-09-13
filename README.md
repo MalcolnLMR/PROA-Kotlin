@@ -34,8 +34,10 @@
         <li><a href="#hora-de-codar-2">Hora de codar 2</a></li>
         <li><a href="#hora-de-codar-3">Hora de codar 3</a></li>
         <li><a href="#hora-de-codar-4">Hora de codar 4</a></li>
-        <li><a href="#hora-de-codar-5">Hora de codar 5 - Hotel</a></li>
-        <li><a href="#hora-de-codar-6">Hora de codar 6 - Tamagotchi</a></li>
+        <li><a href="#hora-de-codar-5">Hora de codar 5</a></li>
+        <li><a href="#hora-de-codar-6">Hora de codar 6 - Hotel</a></li>
+        <li><a href="#hora-de-codar-7">Hora de codar 7 - Tamagotchi</a></li>
+        <li><a href="#hora-de-codar-8">Hora de codar 8 - Hotel</a></li>
       </ul>
     </li>
     <li>
