@@ -1,0 +1,3 @@
+enum class GameOver {
+    NOURISHMENT_ZERO, HAPPINESS_ZERO, ENERGY_ZERO
+}
