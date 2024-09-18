@@ -40,12 +40,6 @@
         <li><a href="#hora-de-codar-8">Hora de codar 8 - Hotel</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#nosql">MongoDB - NoSQL</a>
-      <ul>
-        <li><a href="#nosql-hora-de-codar-1">Hora de codar 1 - Hospital</a></li>
-      </ul>
-    </li>
   </ol>
 </details>
 
