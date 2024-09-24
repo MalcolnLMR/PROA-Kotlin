@@ -1,7 +1,8 @@
 fun main() {
     println("Bem-vindo ao Simulador de Animal de Estimação Virtual!")
     println("Digite o nome do seu animal de estimação:")
-    val nomePet = readlnOrNull() ?: "Baltazar Guilherme Tenório"
+    val _nomePet = readln()
+    val nomePet = if (_nomePet == "") "Gabriel" else _nomePet
     val pet = pet(nomePet)
 
     while (true) {
@@ -18,14 +19,13 @@ fun main() {
             1 -> pet.onEat()
             2 -> pet.onPlay()
             3 -> pet.onRest()
-            4 -> pet.printInfo()
+            4 -> pet.onCheck()
             5 -> {
                 println("Saindo do Simulador de Animal de Estimação Virtual. Adeus!")
                 return
             }
-            else -> println("Escolha inválida. Tente novamente.")
+            else -> {println("Escolha inválida. Tente novamente."); return}
         }
-
         if (!pet.isAlive) {break}
 
         // Simula o tempo que passa após cada ação

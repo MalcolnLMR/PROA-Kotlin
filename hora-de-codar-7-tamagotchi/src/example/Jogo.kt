@@ -5,6 +5,8 @@ fun main() {
     val nomePet = readLine() ?: "Baltazar Guilherme Tenório"
     val pet = VirtualPet(nomePet)
 
+
+
     while (true) {
         println("\nEscolha uma ação:")
         println("1. Alimentar $nomePet")
@@ -14,7 +16,7 @@ fun main() {
 
         val escolha = readLine()?.toIntOrNull() ?: continue
 
-        when (escolha) {
+       when (escolha) {
             1 -> pet.alimentar()
             2 -> pet.brincar()
             3 -> pet.status()
