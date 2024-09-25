@@ -10,8 +10,10 @@ fun main() {
         println("1. Alimentar $nomePet")
         println("2. Brincar com $nomePet")
         println("3. Descansar com $nomePet")
-        println("4. Verificar o status de $nomePet")
-        println("5. Sair")
+        println("4. Tomar banho com $nomePet")
+        println("5. Ir ao banheiro com $nomePet")
+        println("6. Verificar o status de $nomePet")
+        println("7. Sair")
 
         val escolha = readlnOrNull()?.toIntOrNull() ?: continue
 
@@ -19,8 +21,10 @@ fun main() {
             1 -> pet.onEat()
             2 -> pet.onPlay()
             3 -> pet.onRest()
-            4 -> pet.onCheck()
-            5 -> {
+            4 -> pet.onShower()
+            5 -> pet.onToilet()
+            6 -> pet.onCheck()
+            7 -> {
                 println("Saindo do Simulador de Animal de Estimação Virtual. Adeus!")
                 return
             }

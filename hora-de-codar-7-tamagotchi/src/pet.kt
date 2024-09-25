@@ -8,11 +8,10 @@ class pet(private val name : String) {
 
 
     // Decay Info
-    private var nourishmentDecay: Int = -1 * (nourishmentMax / 10)
-    private var happinessDecay: Int = 30
-    private var energyDecay: Int = 10
-    private var toiletEmptynessDecay: Int = 10
-    private var cleanDecay: Int = 10
+    private var happinessDecay: Int = -20
+    private var energyDecay: Int = -10
+    private var toiletEmptynessDecay: Int = -5
+    private var cleanDecay: Int = -5
 
     // Actual values
     private var nourishmentActual: Int = nourishmentMax / 2
@@ -34,9 +33,10 @@ class pet(private val name : String) {
     }
 
     fun onPlay(): Boolean{
-        addHappiness(10)
+        addHappiness(40)
         addNourishment(-5)
         addEnergy(-5)
+        addClean(-10)
         act()
         return true
     }
@@ -67,8 +67,25 @@ class pet(private val name : String) {
         }
 
         addEnergy(value)
-        addNourishment(-5)
+        addNourishment(-10)
         addToiletEmptyness(-value/2)
+        act()
+        return true
+    }
+
+    fun onShower(): Boolean{
+        addClean(100)
+        addHappiness(10)
+        addNourishment(-5)
+        addEnergy(-10)
+        act()
+        return true
+    }
+
+    fun onToilet(): Boolean{
+        addToiletEmptyness(100)
+        addNourishment(-10)
+        addEnergy(-5)
         act()
         return true
     }
@@ -196,8 +213,11 @@ class pet(private val name : String) {
     private fun act(){
         if (!isAlive) return
 
+        println("\n\n-- * Passando de dia * --\n\n")
         addHappiness(happinessDecay)
         addEnergy(energyDecay)
+        addToiletEmptyness(toiletEmptynessDecay)
+        addClean(cleanDecay)
         age++
 
         printInfo()
