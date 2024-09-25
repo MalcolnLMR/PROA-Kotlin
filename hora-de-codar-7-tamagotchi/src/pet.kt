@@ -203,3 +203,9 @@ class pet(private val name : String) {
         printInfo()
     }
 }
+
+
+/*/ᐢ⑅ᐢ\   ♡   ₊˚  
+꒰ ˶• ༝ •˶꒱       ♡‧₊˚    ♡
+./づ~ :¨·.·¨:     ₊˚  
+           `·..·‘    ₊˚   ♡*/
