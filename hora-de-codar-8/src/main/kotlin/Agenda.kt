@@ -27,7 +27,8 @@ suspend fun main() {
         endereco = endereco
     )
 
-    agenda()
+    database.addAgenda(db, item)
+
 }
 
 suspend fun agenda(){
