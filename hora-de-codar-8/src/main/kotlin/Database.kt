@@ -36,6 +36,7 @@ class Database {
             System.err.println(me)
             null
         }
+
     }
 
     suspend fun listAllCollection(database: MongoDatabase?) {
@@ -45,7 +46,7 @@ class Database {
         println("Numero de coleções: $count")
 
         print("A lista de coleções neste banco de dados são -----------> ")
-        database.listCollectionNames().collect { print(" • $it") }
+        database.listCollectionNames().collect { print("\n • $it") }
     }
 
     suspend fun addAgenda(database: MongoDatabase?, agendaToAdd: Agenda) {
@@ -64,13 +65,15 @@ class Database {
         }
     }
 
-    suspend fun readAgenda(database: MongoDatabase?){
-        if (database == null) return
+    suspend fun readAgenda(database: MongoDatabase?): MutableList<Agenda>? {
+        if (database == null) return null
 
+        var contatos = emptyList<Agenda>().toMutableList()
         val collection = database.getCollection<Agenda>(collectionName = "agenda")
-        collection.find<Agenda>().limit(1).collect {
-            println(it)
+        collection.find<Agenda>().collect {
+            contatos.add(it)
         }
+        return contatos
     }
 
     suspend fun countAgenda(database: MongoDatabase?): Long?{
@@ -78,6 +81,17 @@ class Database {
 
         val collection = database.getCollection<Agenda>(collectionName = "agenda")
         return collection.countDocuments()
+    }
+
+    suspend fun getAgenda(database: MongoDatabase?): Array<Agenda?>?{
+        if (database == null) return null
+
+        val collection = database.getCollection<Agenda>(collectionName = "agenda")
+        var agendaData = arrayOfNulls<Agenda>(0)
+        collection.find<Agenda>().collect {
+            agendaData += it
+        }
+        return agendaData
     }
 
 }
