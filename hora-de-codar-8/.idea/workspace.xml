@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53206439-40ac-4223-8d76-3642ca10ecfd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/DatabaseGrade.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/data_classes/Grade.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/grade/Grade.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Agenda.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Agenda.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Database.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Database.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
