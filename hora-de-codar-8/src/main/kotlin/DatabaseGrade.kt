@@ -8,10 +8,8 @@ import org.bson.BsonInt64
 import org.bson.Document
 import org.bson.types.ObjectId
 import org.example.data_classes.Agenda
-import org.example.data_classes.Grade
 
-class Database {
-
+class DatabaseGrade {
     private val client: MongoClient
     private val databaseName = "hora_de_codar_8"
     private val db: MongoDatabase
@@ -50,34 +48,19 @@ class Database {
         database.listCollectionNames().collect { print("\n • $it") }
     }
 
-    suspend fun addAgenda(database: MongoDatabase?, toAdd: Agenda) {
+    suspend fun addAgenda(database: MongoDatabase?, agendaToAdd: Agenda) {
         if (database == null) return
 
         val collection = database.getCollection<Agenda>(collectionName = "agenda")
         val item = Agenda(
             id = ObjectId(),
-            nome = toAdd.nome,
-            endereco = toAdd.endereco,
-            telefone = toAdd.telefone
+            nome = agendaToAdd.nome,
+            endereco = agendaToAdd.endereco,
+            telefone = agendaToAdd.telefone
         )
 
         collection.insertOne(item).also {
             println("Contado adicionado na agendo, com o Id - ${it.insertedId}")
-        }
-    }
-
-    suspend fun addGrade(database: MongoDatabase?, toAdd: Grade) {
-        if (database == null) return
-
-        val collection = database.getCollection<Grade>(collectionName = "grade")
-        val item = Grade(
-            id = ObjectId(),
-            nome = toAdd.nome,
-            notas = toAdd.notas
-        )
-
-        collection.insertOne(item).also {
-            println("Contado adicionado na grade, com o Id - ${it.insertedId}")
         }
     }
 
@@ -92,16 +75,22 @@ class Database {
         return contatos
     }
 
-    suspend fun readGrade(database: MongoDatabase?): MutableList<Grade>? {
+    suspend fun countAgenda(database: MongoDatabase?): Long?{
         if (database == null) return null
 
-        var dbList = emptyList<Grade>().toMutableList()
-        val collection = database.getCollection<Grade>(collectionName = "grade")
-        collection.find<Grade>().collect {
-            dbList.add(it)
-        }
-        return dbList
+        val collection = database.getCollection<Agenda>(collectionName = "agenda")
+        return collection.countDocuments()
     }
 
+    suspend fun getAgenda(database: MongoDatabase?): Array<Agenda?>?{
+        if (database == null) return null
+
+        val collection = database.getCollection<Agenda>(collectionName = "agenda")
+        var agendaData = arrayOfNulls<Agenda>(0)
+        collection.find<Agenda>().collect {
+            agendaData += it
+        }
+        return agendaData
+    }
 
 }

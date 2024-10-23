@@ -198,7 +198,3 @@ suspend fun refreshContatos(){
     contatos = database.readAgenda(db)
     newContatos = emptyList<Agenda>().toMutableList()
 }
-
-
-
-
